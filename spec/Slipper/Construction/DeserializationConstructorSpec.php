@@ -4,6 +4,7 @@ namespace spec\Slipper\Construction;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use Slipper\Metadata\ResourceMetadataInterface;
 
 class DeserializationConstructorSpec extends ObjectBehavior
 {
@@ -13,8 +14,9 @@ class DeserializationConstructorSpec extends ObjectBehavior
         $this->shouldImplement('Slipper\Construction\ConstructorInterface');
     }
 
-    function it_constructs_defined_classes()
+    function it_constructs_defined_classes(ResourceMetadataInterface $metadata)
     {
-        $this->construct('Fixtures\Resource\Course')->shouldHaveType('Fixtures\Resource\Course');
+        $metadata->getName()->willReturn('Fixtures\Resource\Course');
+        $this->construct($metadata)->shouldHaveType('Fixtures\Resource\Course');
     }
 }

@@ -2,13 +2,15 @@
 
 namespace Slipper\Construction;
 
+use Slipper\Metadata\ResourceMetadataInterface;
+
 interface ConstructorInterface
 {
     /**
      * Construct an object of type $className
      *
-     * @param $className
+     * @param ResourceMetadataInterface $metadata
      * @return mixed
      */
-    public function construct($className);
+    public function construct(ResourceMetadataInterface $metadata);
 }
