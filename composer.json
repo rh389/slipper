@@ -1,6 +1,7 @@
 {
     "require": {
-        "doctrine/common": "2.4.*"
+        "doctrine/common": "2.4.*",
+        "jms/cg": "1.1.*@dev"
     },
     "require-dev": {
         "phpspec/phpspec": "2.0.*@dev",
