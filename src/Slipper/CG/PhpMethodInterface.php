@@ -9,4 +9,10 @@ interface PhpMethodInterface
      * @return PhpMethodInterface
      */
     public function addParameter($parameter);
+
+    /**
+     * @param string $body
+     * @return PhpMethodInterface
+     */
+    public function setBody($body);
 }

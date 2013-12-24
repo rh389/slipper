@@ -33,6 +33,12 @@ class JMSPhpMethodSpec extends ObjectBehavior
         $this->addParameter($parameter)->shouldReturn($this);
     }
 
+    function it_can_have_a_body_set_by_a_string($body, $jmsPhpMethod)
+    {
+        $jmsPhpMethod->setBody($body)->shouldBeCalled();
+        $this->setBody($body)->shouldReturn($this);
+    }
+
     function it_is_initializable()
     {
         $this->shouldHaveType('Slipper\CG\JMSPhpMethod');

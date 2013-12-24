@@ -30,6 +30,16 @@ class JMSPhpMethod implements PhpMethodInterface
     }
 
     /**
+     * @param string $body
+     * @return PhpMethodInterface
+     */
+    public function setBody($body)
+    {
+        $this->jmsPhpMethod->setBody($body);
+        return $this;
+    }
+
+    /**
      * @return PhpMethod
      */
     public function getJmsPhpMethod()
